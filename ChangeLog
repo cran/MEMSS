@@ -1,0 +1,5 @@
+2005-04-01  Douglas Bates  <bates@bates1-home>
+
+	* DESCRIPTION: Dependency on lme4_0.95-1 or later.  Changed all
+	examples and tests to use lmer instead of lme.
+
