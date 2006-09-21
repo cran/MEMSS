@@ -1,6 +1,6 @@
 
-R : Copyright 2005, The R Foundation for Statistical Computing
-Version 2.2.1  (2005-12-20 r36812)
+R version 2.4.0 alpha (2006-09-09 r39223)
+Copyright (C) 2006 The R Foundation for Statistical Computing
 ISBN 3-900051-07-0
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -16,27 +16,29 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 
 > library(MEMSS)
+Loading required package: lme4
 Loading required package: Matrix
+Loading required package: lattice
 > options(show.signif.stars = FALSE)
-> lmer(pixel ~ day + I(day^2) + (1|DS) + (day|Dog), Pixel)
-Linear mixed-effects model fit by REML
-Formula: pixel ~ day + I(day^2) + (1 | DS) + (day | Dog) 
+> lmer(pixel ~ day + I(day^2) + (1|Dog:Side) + (day|Dog), Pixel)
+Linear mixed-effects model fit by REML 
+Formula: pixel ~ day + I(day^2) + (1 | Dog:Side) + (day | Dog) 
    Data: Pixel 
-      AIC     BIC    logLik MLdeviance REMLdeviance
- 839.2102 857.585 -412.6051   827.3298     825.2102
+   AIC   BIC logLik MLdeviance REMLdeviance
+ 839.2 857.6 -412.6      827.3        825.2
 Random effects:
  Groups   Name        Variance Std.Dev. Corr   
- DS       (Intercept) 283.0567 16.8243         
- Dog      (Intercept) 804.8460 28.3698         
-          day           3.3994  1.8438  -0.555 
+ Dog:Side (Intercept) 283.0558 16.8243         
+ Dog      (Intercept) 804.8554 28.3700         
+          day           3.3994  1.8437  -0.555 
  Residual              80.8130  8.9896         
-# of obs: 102, groups: DS, 20; Dog, 10
+number of obs: 102, groups: Dog:Side, 20; Dog, 10
 
 Fixed effects:
-               Estimate  Std. Error t value
-(Intercept) 1073.339126   10.171658 105.523
-day            6.129599    0.879321   6.971
-I(day^2)      -0.367350    0.033945 -10.822
+              Estimate Std. Error t value
+(Intercept) 1073.33914   10.17170  105.52
+day            6.12960    0.87932    6.97
+I(day^2)      -0.36735    0.03395  -10.82
 
 Correlation of Fixed Effects:
          (Intr) day   
