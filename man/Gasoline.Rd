@@ -1,6 +1,5 @@
 \name{Gasoline}
 \alias{Gasoline}
-\non_function{}
 \title{Refinery yield of gasoline}
 \description{
   The \code{Gasoline} data frame has 32 rows and 6 columns.
@@ -17,7 +16,8 @@
 	the gasoline is vaporized
     }
     \item{Sample}{
-      an ordered factor giving the inferred crude oil sample number
+      the inferred crude oil sample number - a factor with levels
+      \code{A} to \code{J}
     }
     \item{API}{
       a numeric vector giving the crude oil gravity (degrees API)
@@ -59,5 +59,19 @@
 }
 \examples{
 str(Gasoline)
+xyplot(yield ~ endpoint | Sample, Gasoline, aspect = 'xy',
+       main = "Gasoline data", xlab = "Endpoint (degrees F)",
+       ylab = "Percentage yield",
+       type = c("g", "p", "r"),
+       index.cond = function(x,y) coef(lm(y~x))[2],
+       layout = c(5,2))
+print(m1 <- lmer(yield ~ endpoint + (1|Sample), Gasoline), corr = FALSE)
+m2 <- lmer(yield ~ endpoint + (endpoint|Sample), Gasoline, verbose = 1)
+print(m2)
+Gasoline$endptC <- with(Gasoline, endpoint - mean(endpoint))
+m3 <- lmer(yield ~ endpoint + (endptC|Sample), Gasoline, verbose = 1)
+print(m3)
+xyplot(endptC ~ `(Intercept)`, ranef(m3)[[1]], type = c("g", "p", "r"),
+       aspect = 1)
 }
 \keyword{datasets}

@@ -1,6 +1,5 @@
 \name{Gun}
 \alias{Gun}
-\non_function{}
 \title{Methods for firing naval guns}
 \description{
   The \code{Gun} data frame has 36 rows and 4 columns.
@@ -12,9 +11,7 @@
       a numeric vector
     }
     \item{Method}{
-      a factor with levels
-      \code{M1} 
-      \code{M2} 
+      a factor with levels \code{M1} and \code{M2} 
     }
     \item{Team}{
       an ordered factor with levels

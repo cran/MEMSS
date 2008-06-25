@@ -1,6 +1,5 @@
 \name{Relaxin}
 \alias{Relaxin}
-\non_function{}
 \title{Assay for Relaxin}
 \description{
     The \code{Relaxin} data frame has 198 rows and 3 columns.
@@ -19,8 +18,6 @@
 	    a numeric vector
 	}
     }
-}
-\details{
 }
 \source{
     Pinheiro, J. C. and Bates, D. M. (2000), \emph{Mixed-Effects Models in S

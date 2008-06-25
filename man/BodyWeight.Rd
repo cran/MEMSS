@@ -1,6 +1,5 @@
 \name{BodyWeight}
 \alias{BodyWeight}
-\non_function{}
 \title{Rat weight over time for different diets}
 \description{
     The \code{BodyWeight} data frame has 176 rows and 4 columns.
@@ -16,15 +15,12 @@
 	    made (days).
 	}
 	\item{Rat}{
-	    an ordered factor with levels \code{2} < \code{3} < \code{4}
-	    < \code{1} < \code{8} < \code{5} < \code{6} < \code{7} <
-	    \code{11} < \code{9} < \code{10} < \code{12} < \code{13} <
-	    \code{15} < \code{14} < \code{16} identifying the rat whose
+	    an factor with levels \code{A} to \code{P} identifying the rat whose
 	    weight is measured.
 	}
 	\item{Diet}{
-	    a factor with levels
-	    \code{1} to \code{3} indicating the diet that the rat receives.
+	    a factor with levels \code{a} to \code{c} indicating the
+	    diet that the rat receives.
 	}
     }
 }

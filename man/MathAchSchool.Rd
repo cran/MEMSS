@@ -1,6 +1,5 @@
 \name{MathAchSchool}
 \alias{MathAchSchool}
-\non_function{}
 \title{School demographic data for MathAchieve}
 \description{
     The \code{MathAchSchool} data frame has 160 rows and 7 columns.
@@ -39,8 +38,6 @@
 \details{
   These variables give the school-level demographic data to accompany
   the \code{MathAchieve} data.
-}
-\source{
 }
 \examples{
 str(MathAchSchool)

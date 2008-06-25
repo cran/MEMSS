@@ -1,6 +1,5 @@
 \name{Wafer}
 \alias{Wafer}
-\non_function{}
 \title{Modeling of Analog MOS Circuits}
 \description{
     The \code{Wafer} data frame has 400 rows and 4 columns.
@@ -39,8 +38,6 @@
 	    a numeric vector
 	}
     }
-}
-\details{
 }
 \source{
     Pinheiro, J. C. and Bates, D. M. (2000), \emph{Mixed-Effects Models in S

@@ -1,6 +1,5 @@
 \name{Alfalfa}
 \alias{Alfalfa}
-\non_function{}
 \title{Split-Plot Experiment on Varieties of Alfalfa}
 \description{
   The \code{Alfalfa} data frame has 72 rows and 4 columns.
@@ -22,13 +21,7 @@
       \code{O7} 
     }
     \item{Block}{
-      a factor with levels
-      \code{1} 
-      \code{2} 
-      \code{3} 
-      \code{4} 
-      \code{5} 
-      \code{6} 
+      a factor with levels \code{A} to \code{F}
     }
     \item{Yield}{
       a numeric vector
@@ -56,5 +49,6 @@
 }
 \examples{
 str(Alfalfa)
+(m1 <- lmer(Yield ~ Variety * Date + (1|Block), Alfalfa, verbose = TRUE))
 }
 \keyword{datasets}

@@ -1,6 +1,5 @@
 \name{MathAchieve}
 \alias{MathAchieve}
-\non_function{}
 \title{Mathematics achievement scores}
 \description{
     The \code{MathAchieve} data frame has 7185 rows and 6 columns.
@@ -35,8 +34,6 @@
 }
 \details{
   Each row in this data frame contains the data for one student.
-}
-\source{
 }
 \examples{
 str(MathAchieve)
