@@ -1,3 +1,8 @@
+% File src/library/datasets/man/zCO2.Rd
+% Part of the R package, http://www.R-project.org
+% Copyright 1995-2007 R Core Development Team
+% Distributed under GPL 2 or later
+
 \name{CO2}
 \docType{data}
 \alias{CO2}
@@ -12,9 +17,7 @@
   This data frame contains the following columns:
   \describe{
     \item{Plant}{
-      an ordered factor with levels
-      \code{Qn1} < \code{Qn2} < \code{Qn3} < \dots < \code{Mc1}
-      giving a unique identifier for each plant.
+      an factor giving a unique identifier for each plant.
     }
     \item{Type}{
       a factor with levels
@@ -45,9 +48,9 @@
 \source{
   Potvin, C., Lechowicz, M. J. and Tardif, S. (1990)
   \dQuote{The statistical analysis of ecophysiological response curves
-  obtained from experiments involving repeated measures}, \emph{Ecology},
+    obtained from experiments involving repeated measures}, \emph{Ecology},
   \bold{71}, 1389--1400.
-
+  
   Pinheiro, J. C. and Bates, D. M. (2000)
   \emph{Mixed-effects Models in S and S-PLUS}, Springer.
 }
