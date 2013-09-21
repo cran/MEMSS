@@ -1,4 +1,4 @@
-546a2ca817cfde47cac19ab3a9d57f2d *DESCRIPTION
+ee953fcc75c758d2c86d665619907d78 *DESCRIPTION
 5807c21aeb5910e38672fe4661304195 *NAMESPACE
 a0a67c54c8e5418e00ea6c1de1dcf99e *data/Alfalfa.rda
 679370298123ae493abb4b28ece3dd46 *data/Assay.rda
@@ -85,4 +85,4 @@ b38c7249c0cf95cb55aa8ecb78389c14 *man/Tetracycline2.Rd
 1a6d2abed54c00af19bec7bfd97c72b9 *man/Wheat2.Rd
 ab79cbe2f2623b56bffa1afd41fb18b8 *man/ergoStool.Rd
 4680956b614abbcffc19e41fa71bed20 *tests/Pixel.R
-de5c19056c2f72b8ed0155cada98e260 *tests/Pixel.Rout.save
+e07819f1a77372b6cfc08f276fa3393c *tests/Pixel.Rout.save
