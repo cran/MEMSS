@@ -1,7 +1,7 @@
 
-R Under development (unstable) (2013-09-20 r63958) -- "Unsuffered Consequences"
-Copyright (C) 2013 The R Foundation for Statistical Computing
-Platform: x86_64-unknown-linux-gnu (64-bit)
+R Under development (unstable) (2014-03-08 r65144) -- "Unsuffered Consequences"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -26,91 +26,62 @@ The following objects are masked from 'package:datasets':
 
     CO2, Orange, Theoph
 
-> options(show.signif.stars = FALSE)
+> options(show.signif.stars = FALSE, digits = 3)
 > m1 <- lmer(pixel ~ day + I(day^2) + (1|Dog:Side) + (day|Dog),
-+            Pixel, verbose = TRUE)
-(NM) 20: f = 857.774 at    1.1469   1.16623 0.0228992   0.67542
-(NM) 40: f = 836.029 at  1.37289  1.44812 0.024053 0.193118
-(NM) 60: f = 832.718 at    1.54203    1.50165 -0.0106292   0.150752
-(NM) 80: f = 829.715 at   2.07682   1.59215 -0.112967  0.139204
-(NM) 100: f = 829.576 at   2.13778   1.58507 -0.116749  0.153225
-(NM) 120: f = 829.152 at   2.47042   1.55438 -0.106395  0.156897
-(NM) 140: f = 829.135 at   2.47998   1.55799 -0.106878  0.150427
-(NM) 160: f = 829.134 at   2.51348   1.55967 -0.109291  0.149015
-(NM) 180: f = 829.134 at   2.50251   1.55947 -0.108816  0.149536
-(NM) 200: f = 829.133 at   2.51715   1.55947 -0.109411  0.149531
-(NM) 220: f = 829.13 at   2.51647   1.56038 -0.109969  0.151661
-(NM) 240: f = 829.105 at   2.45795   1.56482 -0.105843    0.1553
-(NM) 260: f = 828.937 at    2.34693    1.60036 -0.0858278   0.157111
-(NM) 280: f = 828.519 at    2.43555    1.71387 -0.0770356   0.166061
-(NM) 300: f = 826.256 at    1.89065    2.44089 -0.0879404   0.200409
-(NM) 320: f = 825.9 at    1.80695     2.7949 -0.0679731   0.201009
-(NM) 340: f = 825.456 at   1.77593   3.02743 -0.101628  0.192875
-(NM) 360: f = 825.34 at   1.75419   2.93405 -0.106906  0.172119
-(NM) 380: f = 825.228 at   1.85103   3.28227 -0.117752  0.171453
-(NM) 400: f = 825.211 at   1.86811   3.14684 -0.115336  0.171049
-(NM) 420: f = 825.21 at   1.86746   3.15503 -0.114327  0.170132
-(NM) 440: f = 825.21 at   1.87079   3.16174 -0.114204  0.170739
-(NM) 460: f = 825.21 at   1.87213   3.15645 -0.113786  0.170535
-(NM) 480: f = 825.21 at   1.87172   3.15585 -0.113749  0.170633
-(NM) 500: f = 825.21 at   1.87166   3.15592 -0.113763  0.170642
-(NM) 520: f = 825.21 at  1.87154  3.15589 -0.11377  0.17065
-(NM) 540: f = 825.21 at   1.87151   3.15585 -0.113773  0.170648
++            Pixel)
 > print(m1, corr = FALSE)
 Linear mixed model fit by REML ['lmerMod']
 Formula: pixel ~ day + I(day^2) + (1 | Dog:Side) + (day | Dog) 
    Data: Pixel 
-REML criterion at convergence: 825.2102 
+REML criterion at convergence: 825 
 Random effects:
  Groups   Name        Std.Dev. Corr 
- Dog:Side (Intercept) 16.824        
- Dog      (Intercept) 28.370        
-          day          1.844   -0.55
- Residual              8.990        
+ Dog:Side (Intercept) 16.82         
+ Dog      (Intercept) 28.37         
+          day          1.84    -0.55
+ Residual              8.99         
 Number of obs: 102, groups: Dog:Side, 20; Dog, 10
 Fixed Effects:
 (Intercept)          day     I(day^2)  
-  1073.3391       6.1296      -0.3674  
-> ranef(m1)
+   1073.339        6.130       -0.367  
+> unclass(ranef(m1))
 $`Dog:Side`
     (Intercept)
-A:L   -5.966125
-A:R  -11.772176
-B:L   -4.051903
-B:R   -9.803051
-C:L   -7.974240
-C:R    3.733944
-D:L    2.110315
-D:R    2.851513
-E:L    3.307949
-E:R    7.110804
-F:L   10.906694
-F:R   -9.904952
-G:L   -5.905726
-G:R   21.115610
-H:L    8.125582
-H:R   -7.415187
-I:L   11.172589
-I:R  -17.048778
-J:L   31.609653
-J:R  -22.202514
+A:L       -5.97
+A:R      -11.77
+B:L       -4.05
+B:R       -9.80
+C:L       -7.97
+C:R        3.73
+D:L        2.11
+D:R        2.85
+E:L        3.31
+E:R        7.11
+F:L       10.91
+F:R       -9.90
+G:L       -5.91
+G:R       21.12
+H:L        8.13
+H:R       -7.42
+I:L       11.17
+I:R      -17.05
+J:L       31.61
+J:R      -22.20
 
 $Dog
-  (Intercept)         day
-A  -24.714207 -1.19537116
-B  -23.582041 -0.43243161
-C  -27.080296  2.19475597
-D  -16.658539  3.09597271
-E   25.299753 -0.56127106
-F   10.823239 -1.03699991
-G   49.353906 -2.27445804
-H   -7.053959  0.99025539
-I   -5.753690 -0.68108462
-J   19.365834 -0.09936767
+  (Intercept)     day
+A      -24.71 -1.1954
+B      -23.58 -0.4324
+C      -27.08  2.1948
+D      -16.66  3.0960
+E       25.30 -0.5613
+F       10.82 -1.0370
+G       49.35 -2.2745
+H       -7.05  0.9903
+I       -5.75 -0.6811
+J       19.37 -0.0994
 
-attr(,"class")
-[1] "ranef.mer"
-> q("no")
+> 
 > proc.time()
    user  system elapsed 
-  3.443   0.060   3.540 
+  2.558   0.075   2.658 
