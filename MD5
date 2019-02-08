@@ -1,4 +1,4 @@
-91cda37a7927d3cfa15d8bb0a574dc7e *DESCRIPTION
+44b4c1398edbb0aad889fc256cbc63ea *DESCRIPTION
 d41d8cd98f00b204e9800998ecf8427e *NAMESPACE
 a0a67c54c8e5418e00ea6c1de1dcf99e *data/Alfalfa.rda
 679370298123ae493abb4b28ece3dd46 *data/Assay.rda
@@ -84,5 +84,5 @@ bc87c001b4a0ae5d2e052fe0c9f2aad0 *man/Theoph.Rd
 15a8084d9db1842baee5938c989851e5 *man/Wheat.Rd
 1a6d2abed54c00af19bec7bfd97c72b9 *man/Wheat2.Rd
 ab79cbe2f2623b56bffa1afd41fb18b8 *man/ergoStool.Rd
-0f66f66f34425f2b4c582fa3d37dc349 *tests/Pixel.R
-22d54e209c598c4a49d64371c8b1e5ac *tests/Pixel.Rout.save
+7ecad7a07b26490ea24340f0d9f0b9a7 *tests/Pixel.R
+a8beb00e372c3eccc7b47225a3aaa971 *tests/Pixel.Rout.save

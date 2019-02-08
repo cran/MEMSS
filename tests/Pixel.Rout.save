@@ -1,7 +1,7 @@
 
-R Under development (unstable) (2014-03-08 r65144) -- "Unsuffered Consequences"
-Copyright (C) 2014 The R Foundation for Statistical Computing
-Platform: x86_64-apple-darwin10.8.0 (64-bit)
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -17,7 +17,6 @@ Type 'q()' to quit R.
 
 > library(MEMSS)
 Loading required package: lme4
-Loading required package: lattice
 Loading required package: Matrix
 
 Attaching package: 'MEMSS'
@@ -27,20 +26,22 @@ The following objects are masked from 'package:datasets':
     CO2, Orange, Theoph
 
 > options(show.signif.stars = FALSE, digits = 3)
+> old_optimizer = lmerControl(optimizer = "bobyqa")  # use an older default
+> 
 > m1 <- lmer(pixel ~ day + I(day^2) + (1|Dog:Side) + (day|Dog),
-+            Pixel)
++            Pixel, control = old_optimizer)
 > print(m1, corr = FALSE)
 Linear mixed model fit by REML ['lmerMod']
-Formula: pixel ~ day + I(day^2) + (1 | Dog:Side) + (day | Dog) 
-   Data: Pixel 
-REML criterion at convergence: 825 
+Formula: pixel ~ day + I(day^2) + (1 | Dog:Side) + (day | Dog)
+   Data: Pixel
+REML criterion at convergence: 825
 Random effects:
  Groups   Name        Std.Dev. Corr 
  Dog:Side (Intercept) 16.82         
  Dog      (Intercept) 28.37         
           day          1.84    -0.55
  Residual              8.99         
-Number of obs: 102, groups: Dog:Side, 20; Dog, 10
+Number of obs: 102, groups:  Dog:Side, 20; Dog, 10
 Fixed Effects:
 (Intercept)          day     I(day^2)  
    1073.339        6.130       -0.367  
@@ -84,4 +85,4 @@ J       19.37 -0.0994
 > 
 > proc.time()
    user  system elapsed 
-  2.558   0.075   2.658 
+   2.56    0.31    2.82 

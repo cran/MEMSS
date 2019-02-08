@@ -1,7 +1,7 @@
 Package: MEMSS
-Version: 0.9-2
-Date: $Date: 2014-03-11 10:05:29 -0400 (Tue, 11 Mar 2014) $
-Title: Data sets from Mixed-effects Models in S
+Version: 0.9-3
+Date: 2019-02-07
+Title: Data Sets from Mixed-Effects Models in S
 Author: Douglas Bates <bates@stat.wisc.edu>,
         Martin Maechler <maechler@R-project.org> and
 	Ben Bolker <bbolker@gmail.com>
@@ -13,7 +13,7 @@ Depends: R(>= 2.12.0), lme4 (>= 0.999375-36)
 Suggests: lattice
 LazyData: yes
 License: GPL (>= 2)
-Packaged: 2014-03-11 16:22:27 UTC; stevenwalker
 NeedsCompilation: no
+Packaged: 2019-02-08 02:04:21 UTC; Steve_Walker
 Repository: CRAN
-Date/Publication: 2014-03-11 17:38:07
+Date/Publication: 2019-02-08 05:13:31 UTC
